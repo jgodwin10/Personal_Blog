@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { useFetchPostQuery } from "../App/PostSlice";
 
 const Advert = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { data, isSuccess } = useFetchPostQuery();
 
-export default Advert
+  if (isSuccess) {
+    console.log(data);
+
+    return <div className="advert"> </div>;
+  }
+};
+
+export default Advert;
