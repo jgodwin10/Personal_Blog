@@ -1,6 +1,9 @@
 import React from "react";
 import FeaturedPostsSmall from "./FeaturedPostsSmall";
 import FeaturedPostsLarge from "./FeaturedPosts";
+import { useFetchPostQuery } from "../App/PostSlice";
+
+
 
 // Define the Featured component
 const Featured = () => {
