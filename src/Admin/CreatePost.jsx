@@ -46,6 +46,10 @@ const CreatePost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!title || !body)
+      return;
+  
     await addPost({ title, body });
     setTitle('');
     setBody('');
@@ -53,21 +57,21 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="text-3xl flex h-[100vh] w-[100%] bg-white text-black mt-20">
+    <div className="text-3xl flex pb-20 h-[100vh] w-[100%] text-black mt-20">
       <Sidebar />
-      <div className="mx-auto flex flex-col">
-        <form action="" className="w-[50vw] mt-14 h-[600px] mx-auto">
-          <label htmlFor="title">
+      <div className="flex flex-col px-8 w-[100%] lg:w-[50vw] md:w-[70%] mx-auto justify-around">
+        <form action="" className="mt-14 h-[600px]">
+          <label className="w-[100%] flex" htmlFor="title">
             Title:
             <input
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="border-2 mb-6 border-neutral-600 outline-none rounded-md px-3 ml-3"
+              className="border-2 mb-6 border-neutral-600 w-[80%] outline-none rounded-md px-3 ml-3"
               type="text"
             />
           </label>
           <ReactQuill
-            className="h-[80%] text-black"
+            className="h-[80%] w-[100%] text-black"
             theme="snow"
             onChange={setBody}
             value={body}
@@ -77,7 +81,7 @@ const CreatePost = () => {
         </form>
         <button
           onClick={handleSubmit}
-          className="bg-blue-500 hover:bg-blue-500/80 transition duration-500 py-3 mt-4"
+          className="bg-green-600 hover:bg-green-600/90 text-white transition duration-500 py-3"
         >
           Publish Post
         </button>

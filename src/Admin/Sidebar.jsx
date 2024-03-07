@@ -8,27 +8,27 @@ const Sidebar = () => {
   
   return (
     <>
-      <div className=" text-white">
+      <div className="hidden md:block text-white">
         <ul>
-          <li className="bg-neutral-900/90 mb-1 rounded-se-md">
+          <li className="bg-green-500/90 mb-1 rounded-se-md">
             <Link className="flex text-xl items-center pl-2 py-1" to="/admin">
               <FaHouseUser className="mr-3" />
               <p className="pr-3">Dashboard</p>
             </Link>
           </li>
-          <li className="bg-neutral-900/90 mb-1">
-            <Link className="flex text-xl items-center pl-2 py-1" to="/admin">
+          <li className="bg-green-500/90 mb-1">
+            <Link className="flex text-xl items-center pl-2 py-1" to="/admin/posts">
               <FaThumbtack className="mr-3" />
               <p className="pr-3">Posts</p>
             </Link>
           </li>
-          <li className="bg-neutral-900/90 mb-1">
+          <li className="bg-green-500/90 mb-1">
             <Link className="flex text-xl items-center pl-2 py-1" to="/admin/new-post">
               <FaEdit className="mr-3" />
               <p className="pr-3">Add New Post</p>
             </Link>
           </li>
-          <li className="bg-neutral-900/90 mb-1 rounded-ee-md">
+          <li className="bg-green-500/90 mb-1 rounded-ee-md">
             <Link className="flex text-xl items-center pl-2 py-1" to="/admin">
               <FaRightFromBracket className="mr-3" />
               <p className="pr-3">Log Out</p>

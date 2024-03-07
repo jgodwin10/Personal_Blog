@@ -5,6 +5,7 @@ import Layout from "./Pages/Layout";
 import AdminLayout from "./Admin/AdminLayout";
 import Dashboard from "./Admin/Dashboard";
 import CreatePost from "./Admin/CreatePost";
+import Posts from "./Admin/Posts";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="new-post" element={<CreatePost />} />
+        <Route path="posts" element={<Posts />} />
       </Route>
     </Routes>
   );
