@@ -21,8 +21,18 @@ export const PostsApi = createApi({
                     return {error}
                 }
             }
+        }),
+        addPost: builder.mutation({
+            async queryFn(data) {
+                try {
+                    await addDoc(collection(db, 'posts'), { ...data, createdAt: serverTimestamp() });
+                    return true;
+                } catch (error) {
+                    return {error}
+                }
+            }
         })
     })
  });
 
- export const  { useFetchPostQuery } = PostsApi;
+ export const  { useFetchPostQuery, useAddPostMutation } = PostsApi;

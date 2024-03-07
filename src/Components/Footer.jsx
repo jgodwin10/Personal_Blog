@@ -6,8 +6,8 @@ const Footer = () => {
   const Year = new Date().getFullYear();
 
   return (
-    <div className="mx-auto max-w-[1440px] px-8">
-      <div className="py-20 border-y border-neutral-700 my-8 grid md:grid-cols-4 md:gap-20 md:gap-y-0 gap-y-16">
+    <div className="mx-auto pb-8 max-w-[1440px] px-8">
+      <div className="py-20 border-y border-neutral-700 mt-8 grid md:grid-cols-4 md:gap-20 md:gap-y-0 gap-y-16">
         <div className="text-center md:text-start">
           <h2 className="text-2xl text-white">
             <span className="font-bold text-green-500/90">Easy</span>Peasy

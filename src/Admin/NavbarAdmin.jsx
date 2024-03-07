@@ -1,11 +1,11 @@
 import React from "react";
 import { FaStream } from "react-icons/fa";
 
-const NavbarAdmin = ({handleSide}) => {
+const NavbarAdmin = () => {
   return (
-    <div className="bg-white fixed top-0 w-[100%] ">
+    <div className="bg-neutral-900 text-white fixed top-0 w-[100%] ">
       <div className="max-w-[1650px] py-2 px-8 mx-auto flex items-center">
-        <FaStream onClick={handleSide} className="size-9 mr-16 cursor-pointer " />
+        <FaStream className="size-9 mr-16 cursor-pointer " />
         <div className="flex justify-between items-center w-[100%]">
           <h2 className="text-2xl">
             <span className="text-green-500/90 font-semibold">Easy</span>Peasy

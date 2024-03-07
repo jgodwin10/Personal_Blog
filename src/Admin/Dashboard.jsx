@@ -1,12 +1,15 @@
-import React from 'react'
-import Sidebar from './Sidebar';
+import React from "react";
+import Sidebar from "./Sidebar";
 
-const Dashboard = ({sidebar}) => {
+const Dashboard = () => {
   return (
-    <div className="text-white">
-      <Sidebar sidebar={sidebar} />
+    <div className="text-white mt-20 flex">
+      <Sidebar />
+      <div>
+
+      </div>
     </div>
   );
-}
+};
 
-export default Dashboard
+export default Dashboard;
