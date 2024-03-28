@@ -24,6 +24,11 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const User = await userModel.findOne({ username });
+  const Passwordvalid = bcrypt.compareSync(password, User.password);
+
+  if (!Passwordvalid) {
+    return res.status(401).json("Unauthorized user");
+  }
   res.json(User);
 });
 
